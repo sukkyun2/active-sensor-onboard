@@ -109,7 +109,7 @@ h3 {
 
 small {
   font-size: 2rem;
-  color : red;
+  color: red;
 }
 
 .image-container {
@@ -127,8 +127,34 @@ html {
 }
 
 @font-face {
-  font-family: 'OTWelcomeBA';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/OTWelcomeBA.woff2') format('woff2');
+  font-family: "OTWelcomeBA";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/OTWelcomeBA.woff2")
+    format("woff2");
   font-weight: normal;
   font-style: normal;
+}
+
+.backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8823529411764706);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-y: hidden;
+  z-index: 1000;
+}
+
+.modal-button {
+  position: relative;
+  bottom: 1.5rem;
+  padding: 0 3rem;
+  min-height: 3rem;
+  margin: auto auto 0 auto;
+  background: orange;
+  color: var(--light);
+  z-index: 10000;
 }

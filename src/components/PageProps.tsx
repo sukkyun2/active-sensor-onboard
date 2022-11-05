@@ -13,7 +13,7 @@ export type Content = {
   index: number;
   title: string;
   subTitle: string;
-  image: string;
+  resource: string;
 };
 
 export enum Operation {

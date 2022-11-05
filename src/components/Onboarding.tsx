@@ -5,7 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useState, useCallback } from "react";
 import OnboardingContent from "./OnboardingContent";
 import SkipButton from "./SkipButton";
-import Modal from "./Backdrop";
+import SkipModal from "./SkipModal";
 
 const swipeConfidenceThreshold = 10000;
 
@@ -16,6 +16,8 @@ const swipePower = (offset: number, velocity: number) => {
 const Onboarding = () => {
   const total = contents.length;
   const [index, setIndex] = useState(0);
+  const [modalOpen, setModalOpen] = useState<boolean>(false);
+
   const paginNation = (op: Operation) => {
     const calculatePage = (index: number): number => Math.abs(index % 3);
     setIndex(calculatePage(index + op));
@@ -34,7 +36,11 @@ const Onboarding = () => {
           [index]
         )}
       ></OnboardingPage>
-      {total == index + 1 ? <SkipButton /> : null}
+      <SkipButton handleOpen={setModalOpen} />
+      {modalOpen ? (
+        <SkipModal handleClose={setModalOpen}
+        ></SkipModal>
+      ) : null}
     </div>
   );
 };
@@ -96,12 +102,7 @@ const OnboardingPage = ({ total, index, paginate }: PagePropsWithPaginate) => {
                 }
               }}
             >
-              <OnboardingContent
-                index={content.index}
-                title={content.title}
-                subTitle={content.subTitle}
-                image={content.image}
-              ></OnboardingContent>
+              <OnboardingContent {...content}></OnboardingContent>
             </motion.div>
           ))}
       </AnimatePresence>

@@ -2,10 +2,14 @@ import { Content } from "./PageProps";
 import Lottie from "lottie-react";
 
 const OnboardingContent = ({ title, subTitle, resource }: Content) => {
+  const description = subTitle.split("\n")[0]
+  const highLightKeyWord = subTitle.split("\n")[1]
+
   return (
     <div className="content">
-      <h3>{title}</h3>
-      <small>{subTitle}</small>
+      <h2>{title}</h2>
+      <small>{description}</small>
+      <p>{highLightKeyWord}</p>
         <Lottie
           className="image-container"
           loop={true}

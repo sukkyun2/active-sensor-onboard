@@ -48,7 +48,7 @@
 .dot-active {
   width: 1.5em;
   height: 1.5em;
-  background-color: red;
+  background-color: #4AA3AB;
   border-radius: 1.5em;
   opacity: 0.8;
 }
@@ -82,15 +82,24 @@ button {
   background-color: white;
   cursor: pointer;
   margin-bottom: 10%; /* 추후수정 */
+  font-family: Apple SD Gothic NeoSB;
+  font-size: 1.5rem;
 }
 
-h3 {
-  font-size: 2.5rem;
+h2 {
+  font-size: 2.8rem;
+  font-family: Apple SD Gothic NeoSB;
+  color: #4AA3AB;
 }
 
 small {
-  font-size: 2rem;
-  color: red;
+  font-size: 1.8rem;
+  font-family: Apple SD Gothic NeoR;
+}
+
+p {
+  font-size: 1.8rem;
+  font-family: Apple SD Gothic NeoB;
 }
 
 .image-container {
@@ -100,7 +109,7 @@ small {
 
 .content {
   text-align: center;
-  font-family: OTWelcomeBA;
+  /* font-family: Apple SD Gothic NeoB; */
 }
 
 html {
@@ -108,8 +117,24 @@ html {
 }
 
 @font-face {
-  font-family: "OTWelcomeBA";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/OTWelcomeBA.woff2")
+  font-family: "Apple SD Gothic NeoSB";
+  src: url("../assets/fonts/AppleSDGothicNeoSB.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Apple SD Gothic NeoR";
+  src: url("../assets/fonts/AppleSDGothicNeoR.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Apple SD Gothic NeoB";
+  src: url("../assets/fonts/AppleSDGothicNeoB.woff2")
     format("woff2");
   font-weight: normal;
   font-style: normal;

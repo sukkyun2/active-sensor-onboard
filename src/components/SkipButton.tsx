@@ -8,7 +8,7 @@ const SkipButton = ({ handleOpen }: SkipButtonProps) => {
   const modalOpen = () => handleOpen(true);
 
   return (
-    <button className="buttons" onClick={modalOpen}>시작하기</button>
+    <button className="buttons" onClick={modalOpen}>건너뛰기</button>
   );
 };
 

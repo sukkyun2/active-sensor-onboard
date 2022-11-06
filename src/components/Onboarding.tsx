@@ -6,6 +6,7 @@ import { useState, useCallback } from "react";
 import OnboardingContent from "./OnboardingContent";
 import SkipButton from "./SkipButton";
 import SkipModal from "./SkipModal";
+import LetterToggleButton from "./LetterToggleButton";
 
 const swipeConfidenceThreshold = 10000;
 
@@ -17,6 +18,7 @@ const Onboarding = () => {
   const total = contents.length;
   const [index, setIndex] = useState(0);
   const [modalOpen, setModalOpen] = useState<boolean>(false);
+  const [isLargeLetter, setLargetLetter] = useState<boolean>(false);
 
   const paginNation = (op: Operation) => {
     const calculatePage = (index: number): number => Math.abs(index % 3);
@@ -25,7 +27,10 @@ const Onboarding = () => {
 
   return (
     <div className="container">
-      <Dots pageCount={total} pageIndex={index}></Dots>
+      <LetterToggleButton 
+      isLargeLetter={isLargeLetter} 
+      setLargetLetter={setLargetLetter}></LetterToggleButton>
+            <Dots pageCount={total} pageIndex={index}></Dots>
       <OnboardingPage
         total={total}
         index={index}

@@ -6,12 +6,11 @@ const OnboardingContent = ({ title, subTitle, resource }: Content) => {
     <div className="content">
       <h3>{title}</h3>
       <small>{subTitle}</small>
-      <div className="image-container">
         <Lottie
+          className="image-container"
           loop={true}
           animationData={require("../assets/data/123760-cat-sneaking.json")}
         />
-      </div>
     </div>
   );
 };

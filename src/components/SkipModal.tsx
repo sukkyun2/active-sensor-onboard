@@ -59,9 +59,13 @@ const SkipModal = ({ handleClose } : ModalProps) => {
             animate="visible"
             exit="exit"
           >
-            <p>더 많은 혜택이 있어요</p>
-            <button className="modal-button" onClick={()=>alert('구현필요')}>네</button>
-            <button className="modal-button" onClick={modalClose}>아니요</button>
+            <div className="modal-content">
+              <p>아직 더 많은 혜택을 확인할 수 있어요!</p>
+            </div>
+            <div className="modal-buttons">
+              <button className="modal-button" onClick={modalClose}>더 볼게요</button>
+              <button className="modal-button" onClick={()=>alert('구현필요')}>괜찮아요</button>
+            </div>
           </motion.div>
       </Backdrop>
     );

@@ -33,7 +33,7 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding-top: 30%;
+  padding-top: 20%;
   padding-bottom: 5%;
 }
 
@@ -146,6 +146,7 @@ html {
   left: 0;
   height: 100%;
   width: 100%;
+  background: rgba(0, 0, 0, 0.8823529411764706);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -154,8 +155,8 @@ html {
 }
 
 .modal {
-  width: 70%;
-  height: min(20%, 300px);
+  width: 90%;
+  height: min(25%, 300px);
   background-color: #fff;
   border-radius: 12px;
   display: flex;
@@ -166,19 +167,37 @@ html {
 .modal-content {
   display: flex;
   width: 100%;
-  height: 50%;
+  height: 100%;
   align-items: center;
   justify-content: center;
+  font-size: 1.8rem;
+  font-family: Apple SD Gothic NeoR;
 }
 
-.modal-button {
+.modal-button-skip{
   position: relative;
   bottom: 1.5rem;
   min-height: 3rem;
   margin: auto auto 0 auto;
-  background: red;
-  color: var(--light);
-  z-index: 10000;
+  background: white;
+  width: 14.5rem;
+  height: 5.7rem;
+  font-size: 1.8rem;
+  font-family: Apple SD Gothic NeoSB;
+  border: 0.4px solid #B6B6B6;
+}
+
+.modal-button{
+  position: relative;
+  bottom: 1.5rem;
+  min-height: 3rem;
+  margin: auto auto 0 auto;
+  background: #2E7F86;
+  width: 14.5rem;
+  height: 5.7rem;
+  font-size: 1.8rem;
+  font-family: Apple SD Gothic NeoSB;
+  color : white;
 }
 
 .modal-buttons {
@@ -214,4 +233,64 @@ html {
   height: 3rem;
   background-color: white;
   border-radius: 2.5rem;
+}
+
+input[type="checkbox"] {
+  margin-top: 10%;
+  margin-left: 70%;
+  position: relative;
+  width: 9.7rem;
+  height: 4rem;
+  -webkit-appearance: none;
+  border-radius: 20px;
+  outline: none;
+  /* transition: .4s; */
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+input:checked[type="checkbox"] {
+  background: #2E7F86;
+}
+
+input[type="checkbox"]::before {
+  z-index: 2;
+  position: absolute;
+  content: "";
+  left: 0;
+  width: 4rem;
+  height: 4rem;
+  background: #8DC9CE;
+  border-radius: 50%;
+  /* transform: scale(1.1); */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  /* transition: .4s; */
+}
+
+input:checked[type="checkbox"]::before {
+  left: 6rem;
+  background: #8DC9CE;
+}
+
+.toggle {
+  position: relative;
+  display: inline;
+  text-align: center;
+}
+
+label {
+  position: absolute;
+  color: red;
+  font-weight: 600;
+  pointer-events: none;
+}
+
+.onbtn {
+  bottom: 0px;
+  left: 11px;
+}  
+.ofbtn {
+  bottom: 0px;
+  right: 8px;
+  color: #8E9AA0;
 }

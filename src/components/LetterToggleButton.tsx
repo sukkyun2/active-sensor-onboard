@@ -13,8 +13,10 @@ const LetterToggleButton = ({
   const toggleSwitch = () => setLargetLetter(!isLargeLetter);
 
   return (
-    <div className="switch" data-isOn={isLargeLetter} onClick={toggleSwitch}>
-      <motion.div className="handle" layout transition={spring}></motion.div>
+    <div className="toggle">
+      <input type="checkbox"/>
+      <label htmlFor="" className="onbtn"></label>
+      <label htmlFor="" className="ofbtn"></label>
     </div>
   );
 };

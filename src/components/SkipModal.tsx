@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Dispatch, SetStateAction } from "react";
+import { useNavigate } from 'react-router-dom';
 
 type BackdropProps = {
   children: React.ReactNode;
@@ -46,7 +47,10 @@ const dropIn = {
 };
 
 const SkipModal = ({ handleClose }: ModalProps) => {
+  const navigate = useNavigate();
+
   const modalClose = () => handleClose(false);
+  const handleSkip = () => navigate("/prepare");
 
   return (
     <Backdrop onClick={modalClose}>
@@ -62,8 +66,8 @@ const SkipModal = ({ handleClose }: ModalProps) => {
           <p>아직 많은 혜택이 남아있어요</p>
         </div>
         <div className="modal-buttons">
-          <button className="modal-button-skip">그만 볼게요</button>
-          <button className="modal-button" onClick={modalClose}>마저 볼게요!</button>
+          <button className="modal-button-skip" onClick={handleSkip}>그만 볼래요</button>
+          <button className="modal-button" onClick={modalClose}>마저 볼래요!</button>
         </div>
       </motion.div>
     </Backdrop>

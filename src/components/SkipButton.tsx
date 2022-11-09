@@ -1,6 +1,7 @@
 import { Dispatch, SetStateAction } from "react";
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
-import { PageProps, PagePropsWithPaginate } from "./PageProps";
+import { PageProps } from "./PageProps";
 
 type SkipButtonProps = {
   handleOpen: Dispatch<SetStateAction<boolean>>;
@@ -8,13 +9,16 @@ type SkipButtonProps = {
 };
 
 const SkipButton = ({ handleOpen, pageProps }: SkipButtonProps) => {
+  const navigate = useNavigate();
+
   const modalOpen = () => handleOpen(true);
   const lastIndex = () => pageProps.index === pageProps.total - 1; 
+  const handleMain = () => navigate('/main') 
 
   return (
     <div className="button-container">
     { lastIndex() ? 
-    <StartButton onClick={()=>alert('메인구현필요')}>콕뱅크시작하기</StartButton>
+    <StartButton onClick={handleMain}>콕뱅크 시작하기</StartButton>
     : <SkipButtons onClick={modalOpen}>건너뛰기</SkipButtons>}
     </div>
   );

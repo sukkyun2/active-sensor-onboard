@@ -1,12 +1,16 @@
 import Lottie from "lottie-react";
 import styled, { css } from "styled-components";
+import {useRepository} from "../assets/data/ResourceRepository";
 
 const OnboardingContent = ({
+  index,
   title,
   subTitle,
   resource,
   isLargeLetter,
 }: ContentProps) => {
+  const handleResource = useRepository();
+
   return (
     <div className="content">
       <Title isLargeLetter={isLargeLetter}>{title}</Title>
@@ -14,7 +18,7 @@ const OnboardingContent = ({
       <Lottie
         className="image-container"
         loop={true}
-        animationData={require("../assets/data/123760-cat-sneaking.json")}
+        animationData={handleResource(index)}
       />
     </div>
   );
@@ -35,6 +39,7 @@ const SubTitle = ({ subTitle, isLargeLetter }: SubTitleProps) => {
 };
 
 type ContentProps = {
+  index : number;
   title: string;
   subTitle: string;
   resource: string;

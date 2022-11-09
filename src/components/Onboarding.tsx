@@ -27,13 +27,15 @@ const Onboarding = () => {
 
   return (
     <div className="container">
-      <LetterToggleButton 
-      isLargeLetter={isLargeLetter} 
-      setLargetLetter={setLargetLetter}></LetterToggleButton>
-            <Dots pageCount={total} pageIndex={index}></Dots>
+      <LetterToggleButton
+        isLargeLetter={isLargeLetter}
+        setLargetLetter={setLargetLetter}
+      ></LetterToggleButton>
+      <Dots pageCount={total} pageIndex={index}></Dots>
       <OnboardingPage
         total={total}
         index={index}
+        isLargeLetter={isLargeLetter}
         paginate={useCallback(
           (op: Operation) => {
             paginNation(op);
@@ -42,15 +44,17 @@ const Onboarding = () => {
         )}
       ></OnboardingPage>
       <SkipButton handleOpen={setModalOpen} />
-      {modalOpen ? (
-        <SkipModal handleClose={setModalOpen}
-        ></SkipModal>
-      ) : null}
+      {modalOpen ? <SkipModal handleClose={setModalOpen}></SkipModal> : null}
     </div>
   );
 };
 
-const OnboardingPage = ({ total, index, paginate }: PagePropsWithPaginate) => {
+const OnboardingPage = ({
+  total,
+  index,
+  paginate,
+  isLargeLetter,
+}: PagePropsWithPaginate) => {
   const [operation, setOperation] = useState<Operation>(Operation.NEXT);
 
   const variants = {
@@ -107,7 +111,7 @@ const OnboardingPage = ({ total, index, paginate }: PagePropsWithPaginate) => {
                 }
               }}
             >
-              <OnboardingContent {...content}></OnboardingContent>
+              <OnboardingContent isLargeLetter={isLargeLetter} {...content} />
             </motion.div>
           ))}
       </AnimatePresence>

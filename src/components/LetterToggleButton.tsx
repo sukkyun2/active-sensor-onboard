@@ -14,9 +14,16 @@ const LetterToggleButton = ({
 
   return (
     <div className="toggle">
-      <input type="checkbox"/>
-      <label htmlFor="" className="onbtn"></label>
-      <label htmlFor="" className="ofbtn"></label>
+      <input
+        className="checkbox"
+        type="checkbox"
+        checked={isLargeLetter}
+        onChange={toggleSwitch}
+      />
+      <label htmlFor="checkbox">
+        <span className="onbtn"></span>
+        <span className="ofbtn"></span>
+      </label>
     </div>
   );
 };

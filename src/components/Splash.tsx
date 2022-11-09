@@ -1,11 +1,10 @@
 
 const Splash = () => {
     return (
-        <div>
-            스플래시임 스플래시임스플래시임스플래시임스플래시임스플래
-            시임스플래시임스플래시임스플래시임스플래시임스플래시임스
-            플래시임스플래시임스플래시임스플래시임스플래시임스플래시임
-            스플래시임스플래시임스플래시임스플래시임
+        <div className="splash">
+        <div className="image-container">
+            <img src="/images/mock_splash.png"></img>
+        </div>
         </div>
     )
 }

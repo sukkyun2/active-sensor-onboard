@@ -1,11 +1,8 @@
 .container {
-  overflow: hidden;
-  position: relative;
-}
-
-.container {
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
+  position: relative;
 }
 
 .slider {
@@ -86,11 +83,11 @@ button {
   font-size: 1.5rem;
 }
 
-.content h2 {
+/* .content h2 {
   font-size: 2.8rem;
   font-family: Apple SD Gothic NeoSB;
   color: #4AA3AB;
-}
+} */
 
 .content small {
   font-size: 1.8rem;
@@ -274,12 +271,12 @@ input:checked[type="checkbox"]::before {
 
 .toggle {
   position: relative;
-  display: inline;
+  /* display: inline; */
   text-align: center;
 }
 
 label {
-  position: absolute;
+  /* position: absolute; */
   color: red;
   font-weight: 600;
   pointer-events: none;
@@ -293,4 +290,47 @@ label {
   bottom: 0px;
   right: 8px;
   color: #8E9AA0;
+}
+
+.splash {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.prepare {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  /* display: flex; */
+  align-items: center;
+}
+
+.start-button {
+  display: block;
+  width: 68vmin;
+  height: 13vmin;
+  margin-left: 16vmin;
+  margin-right: 16vmin;
+  border-radius: 2vmin;
+  margin-top: 10vmax;
+  
+  border: 0;
+  background-color: #2E7F86;
+  color : white;
+  cursor: pointer;
+  font-family: Apple SD Gothic NeoSB;
+  font-size: 2rem;
+}
+
+.prepare-container {
+  padding-top: 40%;
+  text-align: center;
+  font-size: 1.8rem;
+  font-family: Apple SD Gothic NeoR;
+  justify-content: center;
 }

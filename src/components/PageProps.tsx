@@ -7,6 +7,7 @@ export type PagePropsWithPaginate = {
   index: number;
   total: number;
   paginate: (op: Operation) => void;
+  isLargeLetter : boolean;
 };
 
 export type Content = {

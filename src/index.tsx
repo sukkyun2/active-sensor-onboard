@@ -1,34 +1,34 @@
-import React, { lazy, Suspense } from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-// import Onboarding from './components/Onboarding';
+import React, { lazy, Suspense } from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
 import "./components/styles.css";
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Prepare from './components/Prepare';
-import Splash from './components/Splash';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Splash from "./components/Splash";
+import Main from "./components/Main";
 
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+  document.getElementById("root") as HTMLElement
 );
 
 const Onboarding = React.lazy(async () => {
-  await new Promise(resolve => setTimeout(resolve, 3000));
-  return import('./components/Onboarding');
+  await new Promise((resolve) => setTimeout(resolve, 3000));
+  return import("./components/Onboarding");
 });
 
 root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
+        <Route path="/splash" element={<Splash></Splash>} />
         <Route
-          path='/'
+          path="/"
           element={
             <Suspense fallback={<Splash />}>
               <Onboarding />
             </Suspense>
-          } />
-        <Route path='/prepare' element={<Prepare/>}>
-          </Route>  
+          }
+        />
+        <Route path="/main" element={<Main />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

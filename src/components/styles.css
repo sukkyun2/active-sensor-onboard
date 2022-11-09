@@ -1,13 +1,13 @@
 .container {
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
+  /* overflow: hidden; */
   position: relative;
 }
 
 .slider {
   width: 100%;
-  height: 80%;
+  height: 60%;
   justify-content: center;
 
   display: flex;
@@ -58,50 +58,12 @@
   margin-right: 10px;
 }
 
-.buttons {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  gap: 5vmin;
-  text-decoration: underline;
-}
-
-button {
-  display: block;
-  width: 22vmin;
-  height: 10vmin;
-  border-radius: 2vmin;
-  border: 0;
-  background-color: white;
-  cursor: pointer;
-  margin-bottom: 10%; /* 추후수정 */
-  font-family: Apple SD Gothic NeoSB;
-  font-size: 1.5rem;
-}
-
-/* .content h2 {
-  font-size: 2.8rem;
-  font-family: Apple SD Gothic NeoSB;
-  color: #4AA3AB;
-} */
-
-.content small {
-  font-size: 1.8rem;
-  font-family: Apple SD Gothic NeoR;
-}
-
-.content p {
-  font-size: 1.8rem;
-  font-family: Apple SD Gothic NeoB;
-}
 
 .image-container {
-  width: 100%;
-  height: 50%;
+  width: 80%;
+  height: 70%;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 .content {
@@ -301,36 +263,6 @@ label {
   align-items: center;
 }
 
-.prepare {
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-  position: relative;
-  /* display: flex; */
-  align-items: center;
-}
-
-.start-button {
-  display: block;
-  width: 68vmin;
-  height: 13vmin;
-  margin-left: 16vmin;
-  margin-right: 16vmin;
-  border-radius: 2vmin;
-  margin-top: 10vmax;
-  
-  border: 0;
-  background-color: #2E7F86;
-  color : white;
-  cursor: pointer;
-  font-family: Apple SD Gothic NeoSB;
-  font-size: 2rem;
-}
-
-.prepare-container {
-  padding-top: 40%;
-  text-align: center;
-  font-size: 1.8rem;
-  font-family: Apple SD Gothic NeoR;
-  justify-content: center;
+.button-container {
+  display: flex;
 }

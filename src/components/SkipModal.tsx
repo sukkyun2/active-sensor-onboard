@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Dispatch, SetStateAction } from "react";
-import { useNavigate } from 'react-router-dom';
+import { PageProps } from "./PageProps";
 
 type BackdropProps = {
   children: React.ReactNode;
@@ -9,6 +9,8 @@ type BackdropProps = {
 
 type ModalProps = {
   handleClose: Dispatch<SetStateAction<boolean>>;
+  pageProps : PageProps;
+  setIndex : Dispatch<SetStateAction<number>>;
 };
 
 const Backdrop = ({ children, onClick }: BackdropProps) => {
@@ -46,11 +48,12 @@ const dropIn = {
   },
 };
 
-const SkipModal = ({ handleClose }: ModalProps) => {
-  const navigate = useNavigate();
-
+const SkipModal = ({ handleClose, pageProps, setIndex}: ModalProps) => {
   const modalClose = () => handleClose(false);
-  const handleSkip = () => navigate("/prepare");
+  const handleSkip = () => {
+    setIndex(pageProps.total - 1);
+    modalClose();
+  }
 
   return (
     <Backdrop onClick={modalClose}>

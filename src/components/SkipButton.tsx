@@ -1,15 +1,56 @@
 import { Dispatch, SetStateAction } from "react";
+import styled from "styled-components";
+import { PageProps, PagePropsWithPaginate } from "./PageProps";
 
 type SkipButtonProps = {
   handleOpen: Dispatch<SetStateAction<boolean>>;
+  pageProps : PageProps;
 };
 
-const SkipButton = ({ handleOpen }: SkipButtonProps) => {
+const SkipButton = ({ handleOpen, pageProps }: SkipButtonProps) => {
   const modalOpen = () => handleOpen(true);
+  const lastIndex = () => pageProps.index === pageProps.total - 1; 
 
   return (
-    <button className="buttons" onClick={modalOpen}>건너뛰기</button>
+    <div className="button-container">
+    { lastIndex() ? 
+    <StartButton onClick={()=>alert('메인구현필요')}>콕뱅크시작하기</StartButton>
+    : <SkipButtons onClick={modalOpen}>건너뛰기</SkipButtons>}
+    </div>
   );
 };
+
+const Button = styled.button`
+  display: flex;
+  /*position: fixed; */
+  height: 10vmin;
+  border-radius: 2vmin;
+  border: 0;
+  cursor: pointer;
+  margin-bottom: 10%; /* 추후수정 */
+  font-family: Apple SD Gothic NeoSB;
+  left: 0;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+  gap: 5vmin;
+`
+const SkipButtons = styled(Button)`
+  width: 100vw;
+  background-color: white;
+  text-decoration: underline;
+  font-size: 1.5rem;
+`
+
+const StartButton = styled(Button)`
+margin-left: 16vmin;
+margin-right: 16vmin;
+height: 15vmin;
+width: 80vw;
+background-color: #2E7F86;
+color : white;
+font-size: 2rem;
+`
+
 
 export default SkipButton;

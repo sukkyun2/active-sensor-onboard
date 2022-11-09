@@ -1,6 +1,6 @@
 import contents from "../assets/data/db.json";
 import Dots from "./Dot";
-import { Operation, PagePropsWithPaginate } from "./PageProps";
+import { Operation, PageProps, PagePropsWithPaginate } from "./PageProps";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState, useCallback } from "react";
 import OnboardingContent from "./OnboardingContent";
@@ -20,8 +20,13 @@ const Onboarding = () => {
   const [modalOpen, setModalOpen] = useState<boolean>(false);
   const [isLargeLetter, setLargetLetter] = useState<boolean>(false);
 
+  const pageProps : PageProps= {
+    total : total,
+    index : index
+  }
+
   const paginNation = (op: Operation) => {
-    const calculatePage = (index: number): number => Math.abs(index % 3);
+    const calculatePage = (index: number): number => Math.abs(index % total);
     setIndex(calculatePage(index + op));
   };
 
@@ -43,8 +48,8 @@ const Onboarding = () => {
           [index]
         )}
       ></OnboardingPage>
-      <SkipButton handleOpen={setModalOpen} />
-      {modalOpen ? <SkipModal handleClose={setModalOpen}></SkipModal> : null}
+      <SkipButton handleOpen={setModalOpen} pageProps={pageProps}/>
+      {modalOpen ? <SkipModal handleClose={setModalOpen} pageProps={pageProps} setIndex={setIndex}></SkipModal> : null}
     </div>
   );
 };
@@ -85,7 +90,6 @@ const OnboardingPage = ({
           .filter((content) => content.index === index)
           .map((content) => (
             <motion.div
-              className="slider"
               key={content.index}
               custom={index}
               variants={variants}

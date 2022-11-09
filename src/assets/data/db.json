@@ -7,14 +7,26 @@
   },
   {
     "index": 1,
-    "title": "마이데이터2",
-    "subTitle": "나만을 위한 맞춤 자산관리!",
+    "title": "금융상품",
+    "subTitle": "간편한 상품 가입으로\n수익에 집중",
     "resource": "/images/mock_img.png"
   },
   {
     "index": 2,
-    "title": "마이데이터3",
-    "subTitle": "나만을 위한 맞춤 자산관리!",
+    "title": "마이데이터",
+    "subTitle": "나만을 위한 자산 관리를\n한 곳에서",
+    "resource": "/images/mock_img.png"
+  },
+  {
+    "index": 3,
+    "title": "콕팜",
+    "subTitle": "큐레이션 서비스로\n농업,농촌을 쉽게",
+    "resource": "/images/mock_img.png"
+  },
+  {
+    "index": 4,
+    "title" : "",
+    "subTitle": "더 많은 혜택을 누리러 가볼까요?",
     "resource": "/images/mock_img.png"
   }
 ]

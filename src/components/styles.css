@@ -1,7 +1,7 @@
 .container {
   width: 100vw;
   height: 100vh;
-  /* overflow: hidden; */
+  overflow: hidden;
   position: relative;
 }
 
@@ -30,7 +30,7 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding-top: 20%;
+  padding-top: 10%;
   padding-bottom: 5%;
 }
 
@@ -168,26 +168,6 @@ html {
   display: flex;
 }
 
-.switch {
-  margin-top: 10%;
-  margin-left: 70%;
-  position : absolute;
-  width: 6rem;
-  height: 3rem;
-  border-radius: 2.5rem;
-  background-color: #ccc;
-  display: flex;
-  justify-content: flex-start;
-  padding: 10px;
-  cursor: pointer;
-  text-align: center;
-}
-
-.switch[data-isOn="true"] {
-  justify-content: flex-end;
-  background-color: red;
-}
-
 .handle {
   text-align: center;
   vertical-align: center;
@@ -199,7 +179,7 @@ html {
 
 input[type="checkbox"] {
   margin-top: 10%;
-  margin-left: 70%;
+  /* margin-left: 70%; */
   position: relative;
   width: 9.7rem;
   height: 4rem;
@@ -235,26 +215,39 @@ input:checked[type="checkbox"]::before {
 }
 
 .toggle {
+  margin-top: 10%;
+  margin-right: 10%;
   position: relative;
-  /* display: inline; */
-  text-align: center;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.toggle-switch {
+  display: inline-block;
+  position: relative;
 }
 
 label {
   /* position: absolute; */
-  color: red;
+  color: #fff;
   font-weight: 600;
-  pointer-events: none;
+  /* pointer-events: none; */
 }
 
 .onbtn {
-  bottom: 0px;
+  bottom: 25%;
   left: 11px;
+  position: absolute;
+  font-size : 1.5rem;
+  font-family: Apple SD Gothic NeoR;
 }  
 .ofbtn {
-  bottom: 0px;
+  bottom: 25%;
   right: 8px;
-  color: #8E9AA0;
+  color: #2E8289;
+  position: absolute;
+  font-size : 1.2rem;
+  font-family: Apple SD Gothic NeoSB;
 }
 
 .splash {

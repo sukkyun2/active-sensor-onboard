@@ -4,7 +4,7 @@ import "./index.css";
 import "./components/styles.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Splash from "./components/Splash";
-import Main from "./components/Main";
+import Main from "./components/Join";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement

@@ -144,6 +144,7 @@ html {
   font-size: 1.8rem;
   font-family: Apple SD Gothic NeoSB;
   border: 0.4px solid #B6B6B6;
+  border-radius: 1rem;
 }
 
 .modal-button{
@@ -157,6 +158,8 @@ html {
   font-size: 1.8rem;
   font-family: Apple SD Gothic NeoSB;
   color : white;
+  border-radius: 1rem;
+  border: 0;
 }
 
 .modal-buttons {

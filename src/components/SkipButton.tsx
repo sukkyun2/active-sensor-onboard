@@ -22,12 +22,10 @@ const SkipButton = ({ handleOpen, pageProps }: SkipButtonProps) => {
 
 const Button = styled.button`
   display: flex;
-  /*position: fixed; */
   height: 10vmin;
   border-radius: 2vmin;
   border: 0;
   cursor: pointer;
-  margin-bottom: 10%; /* 추후수정 */
   font-family: Apple SD Gothic NeoSB;
   left: 0;
   bottom: 0;

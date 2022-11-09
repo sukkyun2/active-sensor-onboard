@@ -119,6 +119,8 @@ const OnboardingPage = ({
             </motion.div>
           ))}
       </AnimatePresence>
+      <div className="arrow-next" onClick={() => paginate(Operation.NEXT)}></div>
+      <div className="arrow-prev" onClick={() => paginate(Operation.PREV)}></div>
     </div>
   );
 };

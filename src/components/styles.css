@@ -231,7 +231,7 @@ label {
 }
 
 .onbtn {
-  bottom: 25%;
+  bottom: 27%;
   left: 11px;
   position: absolute;
   font-size: 1.5rem;
@@ -269,4 +269,51 @@ label {
   margin: auto;
   overflow: auto;
   position: fixed;
+}
+
+.arrow-next {
+  right: 10px;
+}
+
+.arrow-prev {
+  left: 10px;
+}
+
+.arrow-prev,
+.arrow-next {
+  top: calc(50% - 20px);
+  position: absolute;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  z-index: 2;
+}
+
+.arrow-prev::after {
+    position: absolute;
+    left: 1rem; 
+    top: 2rem;
+    content: '';
+    width: 30px; 
+    height: 30px; 
+    border-top: 5px solid #B3B3B3;
+    border-right: 5px solid #B3B3B3; 
+    transform: rotate(225deg);
+}
+
+.arrow-next::after {
+    right: 1rem;
+    position: absolute;
+    top: 2rem; 
+    content: '';
+    width: 30px; 
+    height: 30px; 
+    border-top: 5px solid #B3B3B3;
+    border-right: 5px solid #B3B3B3; 
+    transform: rotate(45deg); 
 }

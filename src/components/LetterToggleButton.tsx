@@ -20,8 +20,10 @@ const LetterToggleButton = ({
           onChange={toggleSwitch}
         />
         <div>
-        <span className="onbtn">큰글씨</span>
-        <span className="ofbtn">보통글씨</span>
+          { isLargeLetter 
+           ? <span className="onbtn">큰글씨</span>
+           : <span className="ofbtn">보통글씨</span>
+          }
         </div>
       </label>
     </div>

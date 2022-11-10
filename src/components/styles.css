@@ -232,7 +232,7 @@ label {
 
 .onbtn {
   bottom: 26%;
-  left: 1.2rem;
+  left: 1.7rem;
   position: absolute;
   font-size: 1.5rem;
   font-family: Apple SD Gothic NeoR;
@@ -320,10 +320,13 @@ label {
 }
 
 @media all and (max-height: 850px) {
-
   .content img {
     width: 80%;
-
   }
+}
 
+@media all and (max-height: 752px) {
+  .content img {
+    width: 70%;
+  }
 }

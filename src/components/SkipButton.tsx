@@ -36,7 +36,7 @@ const Button = styled.button`
   justify-content: center;
   align-items: center;
   gap: 5vmin;
-  margin-top : min(10%,10px);
+  margin-top : min(10%,50px);
 `
 const SkipButtons = styled(Button)`
   width: 100vw;

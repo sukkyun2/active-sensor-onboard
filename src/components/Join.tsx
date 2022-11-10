@@ -1,7 +1,7 @@
 const Join = () => {
     return (
         <div>
-            <img className="join-image" src="/images/mock-join.jpg"></img>
+            <img className="full-image" src="/images/mock-join.jpg"></img>
         </div>
     )
 }

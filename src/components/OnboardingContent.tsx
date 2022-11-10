@@ -1,6 +1,4 @@
-import Lottie from "lottie-react";
 import styled, { css } from "styled-components";
-import {useRepository} from "../assets/data/ResourceRepository";
 
 const OnboardingContent = ({
   index,
@@ -9,8 +7,6 @@ const OnboardingContent = ({
   resource,
   isLargeLetter,
 }: ContentProps) => {
-  const handleResource = useRepository();
-
   return (
     <div className="content">
       <Title isLargeLetter={isLargeLetter}>{title}</Title>

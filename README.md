@@ -4,7 +4,6 @@
 ## 사용기술
 1. React
 1. Typescript
-1. Lottie-React
 1. Framer-Motion
 ------------------
 ## Demo

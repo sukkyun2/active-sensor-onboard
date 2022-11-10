@@ -177,7 +177,7 @@ input[type="checkbox"] {
   margin-top: 10%;
   /* margin-left: 70%; */
   position: relative;
-  width: 9.7rem;
+  width: 10rem;
   height: 4rem;
   -webkit-appearance: none;
   border-radius: 2rem;
@@ -231,15 +231,15 @@ label {
 }
 
 .onbtn {
-  bottom: 27%;
-  left: 11px;
+  bottom: 26%;
+  left: 1.2rem;
   position: absolute;
   font-size: 1.5rem;
   font-family: Apple SD Gothic NeoR;
 }
 .ofbtn {
-  bottom: 30%;
-  right: 8px;
+  bottom: 28%;
+  right: 1.5rem;
   color: #2e8289;
   position: absolute;
   font-size: 1.2rem;

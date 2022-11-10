@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { Dispatch, SetStateAction } from "react";
 
 type LetterToggleProps = {
@@ -27,12 +26,6 @@ const LetterToggleButton = ({
       </label>
     </div>
   );
-};
-
-const spring = {
-  type: "spring",
-  stiffness: 700,
-  damping: 30,
 };
 
 export default LetterToggleButton;

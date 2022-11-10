@@ -15,11 +15,7 @@ const OnboardingContent = ({
     <div className="content">
       <Title isLargeLetter={isLargeLetter}>{title}</Title>
       <SubTitle subTitle={subTitle} isLargeLetter={isLargeLetter} />
-      <Lottie
-        className="image-container"
-        loop={true}
-        animationData={handleResource(index)}
-      />
+      <img src={resource}></img>
     </div>
   );
 };

@@ -3,30 +3,30 @@
     "index": 0,
     "title": "간편한 송금",
     "subTitle": "가장 쉽고 빠른 송금으로\n시간 절약",
-    "resource": "/images/mock_img.png"
+    "resource": "/images/prepare.gif"
   },
   {
     "index": 1,
     "title": "금융상품",
-    "subTitle": "간편한 상품 가입으로\n수익에 집중",
-    "resource": "/images/mock_img.png"
+    "subTitle": "다양한 상품 제안으로\n고르는 즐거움",
+    "resource": "/images/prepare.gif"
   },
   {
     "index": 2,
     "title": "마이데이터",
     "subTitle": "나만을 위한 자산 관리를\n한 곳에서",
-    "resource": "/images/mock_img.png"
+    "resource": "/images/prepare.gif"
   },
   {
     "index": 3,
     "title": "콕팜",
     "subTitle": "큐레이션 서비스로\n농업,농촌을 쉽게",
-    "resource": "/images/mock_img.png"
+    "resource": "/images/prepare.gif"
   },
   {
     "index": 4,
     "title" : "",
     "subTitle": "더 많은 혜택을 누리러 가볼까요?",
-    "resource": "/images/mock_img.png"
+    "resource": "/images/prepare.gif"
   }
 ]
